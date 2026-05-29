@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ─── */
+:root {
+  --bg:        #1E1B1B;
+  --gold:      #EAC97C;
+  --gold-dark: #826015;
+  --panel:     #514733;
+  --teal:      #0E7490;
+  --emerald:   #059669;
+  --text-1:    #B7AA91;
+  --text-2:    #C8BAA6;
+  --text-3:    #8F7E5E;
+}
+
+/* ─── Base ─── */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #1E1B1B;
+  color: #B7AA91;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1E1B1B; }
+::-webkit-scrollbar-thumb { background: #514733; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #8F7E5E; }
+
+/* ─── Gradient text ─── */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #EAC97C 0%, #C8BAA6 50%, #EAC97C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Glass ─── */
+.glass {
+  background: rgba(81, 71, 51, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(143, 126, 94, 0.2);
+}
+.glass-strong {
+  background: rgba(81, 71, 51, 0.30);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(143, 126, 94, 0.3);
+}
+
+/* ─── Hero mesh background ─── */
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(130,96,21,0.15), transparent),
+    radial-gradient(ellipse 40% 40% at 85% 20%, rgba(14,116,144,0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(143,126,94,0.08), transparent),
+    radial-gradient(ellipse 35% 35% at 10% 60%, rgba(5,150,105,0.05), transparent),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(130,96,21,0.06), transparent),
+    #1E1B1B;
+}
+
+/* ─── Grid overlay ─── */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(14,116,144,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234,201,124,0.2) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* ─── Animations ─── */
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-30px) scale(1.05); }
+}
+@keyframes ring-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(130,96,21,0.15); }
+  50%       { box-shadow: 0 0 0 12px rgba(130,96,21,0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-orb-float   { animation: orb-float 20s ease-in-out infinite; }
+.animate-ring-spin   { animation: ring-spin 30s linear infinite; }
+.animate-float       { animation: float-gentle 4s ease-in-out infinite; }
+.animate-pulse-soft  { animation: pulse-soft 3s ease-in-out infinite; }
+.animate-spin-smooth { animation: spin 0.8s linear infinite; }
+
+/* ─── Section divider ─── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(14,116,144,0.3), transparent);
+}
+
+/* ─── BOM table ─── */
+.bom-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.bom-table th {
+  text-align: left; padding: 8px 10px;
+  border-bottom: 1px solid rgba(143,126,94,0.3);
+  color: #EAC97C; font-weight: 600; white-space: nowrap;
+}
+.bom-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(81,71,51,0.3);
+  color: #C8BAA6; vertical-align: top;
+}
+.bom-table tr:hover td { background: rgba(81,71,51,0.15); }
+
+/* ─── Safe area for demo input ─── */
+.safe-bottom {
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
+}
