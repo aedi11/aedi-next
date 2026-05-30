@@ -6,7 +6,7 @@ import Link from "next/link";
 import {
   ChevronLeft, Zap, Battery, Cpu,
   BrainCircuit, CheckCircle2, Loader2,
-  Send, HardHat, Maximize2, X, AlertTriangle,
+  Lock, HardHat, Maximize2, X, AlertTriangle,
 } from "lucide-react";
 import type { Message, MultiDesignResponse, ReasoningStep, DesignVariant } from "@/lib/types";
 import { DEMO_PROMPTS, VARIANT_CONFIG } from "@/lib/data";
@@ -635,25 +635,20 @@ export default function DemoPage() {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Describe your battery pack requirements or select a prompt above..."
+              placeholder="Engineers at work — Please come after sometime. Regret the inconvenience!"
+              disabled
               rows={1}
               maxLength={4000}
-              className="max-h-[120px] min-h-[20px] flex-1 resize-none overflow-y-auto bg-transparent text-[14px] leading-relaxed text-[#C8BAA6] outline-none placeholder:text-[#8F7E5E]/50"
+              className="max-h-[120px] min-h-[20px] flex-1 resize-none overflow-y-auto bg-transparent text-[14px] leading-relaxed text-[#C8BAA6] outline-none placeholder:text-[#8F7E5E]/50 disabled:cursor-not-allowed"
             />
             <button
               onClick={() => { if (canSend) { const idx = DEMO_PROMPTS.findIndex((dp) => dp.prompt === inputValue.trim()); sendQuery(inputValue, idx >= 0 ? idx : 0); } }}
-              disabled={!canSend}
+              disabled={true}
               aria-label="Send message"
               className="mb-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#826015] text-[#1E1B1B] transition-all duration-200 hover:bg-[#9A7A2F] disabled:cursor-not-allowed disabled:opacity-40 active:scale-95"
             >
-              <Send className="h-4 w-4" />
+              <Lock className="h-4 w-4" />
             </button>
-          </div>
-          <div className="mt-2.5 flex items-center justify-center gap-2">
-            <HardHat className="h-3.5 w-3.5 text-[#EAC97C]/60" />
-            <p className="text-[11px] italic text-[#8F7E5E]/70">
-              Engineers at work — Please come after sometime. Regret the inconvenience!
-            </p>
           </div>
         </div>
       </div>

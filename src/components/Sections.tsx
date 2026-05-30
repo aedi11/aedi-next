@@ -74,10 +74,10 @@ export function VisionSection() {
    ENGINE
    ══════════════════════════════ */
 const BOX_SIZES = [
-  { size: 280, font: "text-[15px]" },
-  { size: 200, font: "text-xs" },
-  { size: 150, font: "text-[11px]" },
-  { size: 120, font: "text-[10px]" },
+  { size: 280, baseSize: 15 },
+  { size: 200, baseSize: 12 },
+  { size: 150, baseSize: 11 },
+  { size: 120, baseSize: 10 },
 ];
 
 const BOX_TEXTS = [
@@ -115,7 +115,10 @@ export function EngineSection() {
                   style={{ width: s.size, height: s.size, maxWidth: "45vw" }}
                 >
                   <Image src="/images/box.png" alt="" fill className="object-contain" />
-                  <p className={`absolute inset-[20%] flex items-center justify-center text-center font-display font-bold leading-snug text-[#EAC97C] ${s.font}`}>
+                  <p 
+                    className="absolute inset-[20%] flex items-center justify-center text-center font-display font-bold leading-snug text-[#EAC97C]"
+                    style={{ fontSize: `clamp(6px, ${(s.baseSize / s.size) * 45}vw, ${s.baseSize}px)` }}
+                  >
                     {text}
                   </p>
                 </div>
@@ -337,13 +340,13 @@ export function ContactSection() {
             cs@chunchreek.com
           </a>
           <p className="mt-2.5 text-[13px] leading-relaxed text-[#B7AA91]/70">
-            Automatic Electronic Design Initiative (AEDI)
+            <span className="font-bold text-[#EAC97C]">Automatic Electronic Design Initiative (AEDI)</span>
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> </span>
             is promoted by
             <span className="hidden sm:inline"> </span>
             <br className="sm:hidden" />
-            <span className="font-medium text-[#EAC97C]/80">Chunchreek Ventures India Private Limited (CVIL)</span>
+            Chunchreek Ventures India Private Limited (CVIL)
           </p>
           <p className="mt-2.5 text-xs leading-relaxed text-[#B7AA91]/60">
             📍 2C1B, Research and Innovation Park, Indian Institute of Technology (IIT) Delhi,<br />
