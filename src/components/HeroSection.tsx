@@ -89,7 +89,7 @@ export default function HeroSection() {
               <div className="flex flex-col items-center gap-2">
                 <Image src="/images/nvidia.png" alt="NVIDIA Inception" width={120} height={120}
                   sizes="(max-width: 768px) 100px, 120px"
-                  className="h-24 w-auto object-contain sm:h-32 brightness-0 invert opacity-80" priority />
+                  className="h-24 w-auto object-contain sm:h-32" priority />
                 <span className="text-[11px] font-medium tracking-wide text-[#B7AA91]/70">NVIDIA Inception</span>
               </div>
             </div>
