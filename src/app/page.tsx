@@ -4,11 +4,11 @@ import HeroSection from "@/components/HeroSection";
 import { VisionSection, EngineSection } from "@/components/Sections";
 import ScrollToTop from "@/components/ScrollToTop";
 
-// Lazy-load heavy below-fold sections
-const ScopeSection = dynamic(() => import("@/components/Sections").then(m => ({ default: m.ScopeSection })), { ssr: false });
-const ImpactSection = dynamic(() => import("@/components/Sections").then(m => ({ default: m.ImpactSection })), { ssr: false });
-const ContactSection = dynamic(() => import("@/components/Sections").then(m => ({ default: m.ContactSection })), { ssr: false });
-const LeadershipSection = dynamic(() => import("@/components/LeadershipSection"), { ssr: false });
+// Lazy-load heavy below-fold sections for code splitting
+const ScopeSection = dynamic(() => import("@/components/Sections").then(m => ({ default: m.ScopeSection })));
+const ImpactSection = dynamic(() => import("@/components/Sections").then(m => ({ default: m.ImpactSection })));
+const ContactSection = dynamic(() => import("@/components/Sections").then(m => ({ default: m.ContactSection })));
+const LeadershipSection = dynamic(() => import("@/components/LeadershipSection"));
 
 export default function Home() {
   return (
