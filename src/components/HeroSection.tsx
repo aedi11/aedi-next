@@ -9,8 +9,8 @@ import FadeUp from "./FadeUp";
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-mesh overflow-hidden">
-      {/* Decorative orbs */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+      {/* Decorative orbs — hidden on mobile for perf */}
+      <div className="pointer-events-none absolute inset-0 hidden sm:block" aria-hidden="true">
         <div className="absolute rounded-full animate-orb-float"
           style={{ width:500, height:500, background:"#826015", opacity:0.06, filter:"blur(120px)", left:"15%", top:"10%" }} />
         <div className="absolute rounded-full animate-orb-float"
@@ -82,12 +82,14 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center justify-center gap-10">
               <div className="flex flex-col items-center gap-2">
                 <Image src="/images/iitd_logo.png" alt="IIT Delhi" width={120} height={120}
+                  sizes="(max-width: 768px) 80px, 120px"
                   className="h-24 w-auto object-contain sm:h-32" priority />
                 <span className="text-[11px] font-medium tracking-wide text-[#B7AA91]/70">IIT Delhi</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <Image src="/images/nvidia.png" alt="NVIDIA Inception" width={120} height={120}
-                  className="h-24 w-auto object-contain sm:h-32" priority />
+                  sizes="(max-width: 768px) 100px, 120px"
+                  className="h-24 w-auto object-contain sm:h-32 brightness-0 invert opacity-80" priority />
                 <span className="text-[11px] font-medium tracking-wide text-[#B7AA91]/70">NVIDIA Inception</span>
               </div>
             </div>

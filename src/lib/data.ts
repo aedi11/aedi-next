@@ -183,21 +183,70 @@ export const TEAM_MEMBERS = [
   },
 
   {
-    Icon: Briefcase,
-    image: "/images/chunchreek_singhvi.jpg",
-    name: "Chunchreek Singhvi",
-    dept: "",
-    role: "Shareholder",
-    accent: "#EAC97C",
+    Icon: Code,
+    image: "/images/bhanu.png",
+    name: "Bhanu Pratap Singh",
+    dept: "Dept. of Biochemical Engineering and Biotechnology, IIT Delhi",
+    role: "AI Engineer - Intern",
+    accent: "#826015",
     bio: [
-      "Identified the opportunity after 10+ years of hands-on industry experience in embedded engineering management.",
-      ">20 years as part of startup initiatives across innovative technologies, venture capital and private equity in 15 industries across 10 countries.",
-      ">USD 700 Mn in business development, global tech JVs, technology adaptation, product development & operations experiences.",
-      "USD 500 Mn VC-PE fund raising, investment & portfolio management experiences.",
-      "Smurfit, UC Dublin - Masters in Business; Bachelors in Law; B.A. Economics; Scholar at Eton & Reims.",
+      "Currently pursuing B.Tech in Biochemical Engineering and Biotechnology (1st year) at IIT Delhi",
+      "Research enthusiast",
+      "Undertaking research projects in AI/ML and computational Biology",
     ],
   },
-
+  {
+    Icon: Code,
+    image: "/images/duke.png",
+    name: "Duke Jain",
+    dept: "Dept. of Biotechnology & Biochemical Engineering, IIT Delhi",
+    role: "Full Stack Developer - Intern",
+    accent: "#826015",
+    bio: [
+      "Currently pursuing a B.Tech in Biotechnology & Biochemical Engineering (1st year) at IIT Delhi",
+      "Hands-on experience with OpenCV and computer vision pipelines",
+      "Founder & Developer of IITD Connect (iitdconnect.in), a full-stack, IITD-verified closed social platform",
+    ],
+  },
+  {
+    Icon: Code,
+    image: "/images/lakshita.png",
+    name: "Lakshita",
+    dept: "Dept. of Electrical Engineering, IIT Delhi",
+    role: "Backend Developer - Intern",
+    accent: "#826015",
+    bio: [
+      "Currently pursuing a B.Tech in Electrical Engineering (3rd year) at IIT Delhi",
+      "Worked on projects ranging from efficient data structures to ML models, including a BERT-based sentiment classifier.",
+      "Former Embedded Systems intern at Texas Instruments; built a smart streetlight prototype focused on energy efficiency and real-time control.",
+    ],
+  },
+  {
+    Icon: Code,
+    image: "/images/tanay.png",
+    name: "Tanay",
+    dept: "Dept. of Computer Science & Engineering, IIT Delhi",
+    role: "AI Engineer - Intern",
+    accent: "#826015",
+    bio: [
+      "Currently a 2nd-year Computer Science & Engineering undergraduate at IIT Delhi, maintaining a strong focus on the theoretical foundations of the field",
+      "Deeply proficient in algorithms and probability, utilizing these mathematical frameworks to solve complex computational problems and optimize system performance.",
+      "Passionate about the intersection of software and hardware, specifically exploring Electronic Design Automation (EDA) to build tools that streamline and automate the digital design lifecycle.",
+    ],
+  },
+  {
+    Icon: Code,
+    image: "/images/pinaki.png",
+    name: "Pinaki Narula",
+    dept: "Dept. of Chemical Engineering, IIT Delhi",
+    role: "Strategy & Consulting - Intern",
+    accent: "#826015",
+    bio: [
+      "Currently pursuing BTech+Mtech(Dual Degree) in Chemical Engineering at IIT Delhi(First Year)",
+      "Worked on project involving simulation to implement Reinforcement Learning algorithms, AI enthusiast",
+      "Active in consulting and strategy space with podium finishes in case-competitions held at IIT Delhi and ranked in top 10% of winter consulting program by IIT Guwahati",
+    ],
+  },
 ];
 
 // ─── Demo Prompts ────────────────────────────────
