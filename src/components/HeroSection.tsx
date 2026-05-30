@@ -83,7 +83,9 @@ export default function HeroSection() {
               <div className="flex flex-col items-center gap-2">
                 <Image src="/images/iitd_logo.png" alt="IIT Delhi" width={120} height={120}
                   sizes="(max-width: 768px) 80px, 120px"
-                  className="h-24 w-auto object-contain sm:h-32" priority />
+                  className="h-24 w-auto object-contain sm:h-32"
+                  style={{ mixBlendMode: "screen", filter: "brightness(1.1) contrast(1.1)" }}
+                  priority />
                 <span className="text-[11px] font-medium tracking-wide text-[#B7AA91]/70">IIT Delhi</span>
               </div>
               <div className="flex flex-col items-center gap-2">
