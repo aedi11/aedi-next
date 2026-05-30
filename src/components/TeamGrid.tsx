@@ -30,6 +30,7 @@ function TeamCard({ member }: { member: Member }) {
             alt={member.name}
             width={88}
             height={88}
+            loading="lazy"
             className="h-[88px] w-[88px] rounded-full object-cover object-top"
           />
         </div>
@@ -81,6 +82,7 @@ function TeamCard({ member }: { member: Member }) {
                     alt={member.name}
                     width={72}
                     height={72}
+                    loading="lazy"
                     className="h-[72px] w-[72px] rounded-full object-cover object-top"
                   />
                 </div>

@@ -6,6 +6,8 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -13,6 +15,12 @@ export const metadata: Metadata = {
   description:
     "Empowering India's hardware ecosystem through high-powered computing and AI-enabled Electronic Design Automation toolkits.",
   keywords: ["AEDI", "Electronic Design Automation", "EDA", "AI India", "Deep Tech", "NVIDIA Inception"],
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "AEDI — Automated Electronic Design Initiative",
+    description: "Empowering India's hardware ecosystem through AI-enabled Electronic Design Automation.",
+    type: "website",
+  },
 };
 
 export const viewport: Viewport = {

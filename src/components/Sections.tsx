@@ -261,6 +261,7 @@ export function ScopeSection() {
                 </div>
                 <div className="hidden shrink-0 lg:block">
                   <Image src={item.image} alt={item.title} width={208} height={144}
+                    loading="lazy"
                     className="h-36 w-52 rounded-xl object-contain" />
                 </div>
               </div>
@@ -324,6 +325,7 @@ export function ContactSection() {
         {/* Left honeycomb */}
         <div className="hidden sm:block shrink-0">
           <Image src="/images/honeycomb.png" alt="" width={200} height={200}
+            loading="lazy"
             className="pointer-events-none h-36 w-auto opacity-60 sm:h-52 md:h-64"
             style={{ transform: "rotate(180deg)" }} />
         </div>
@@ -335,7 +337,12 @@ export function ContactSection() {
             cs@chunchreek.com
           </a>
           <p className="mt-2.5 text-[13px] leading-relaxed text-[#B7AA91]/70">
-            Automatic Electronic Design Initiative (AEDI) is promoted by{" "}
+            Automatic Electronic Design Initiative (AEDI)
+            <br className="sm:hidden" />
+            <span className="hidden sm:inline"> </span>
+            is promoted by
+            <span className="hidden sm:inline"> </span>
+            <br className="sm:hidden" />
             <span className="font-medium text-[#EAC97C]/80">Chunchreek Ventures India Private Limited (CVIL)</span>
           </p>
           <p className="mt-2.5 text-xs leading-relaxed text-[#B7AA91]/60">
@@ -362,6 +369,7 @@ export function ContactSection() {
         {/* Right honeycomb */}
         <div className="hidden sm:block shrink-0">
           <Image src="/images/honeycomb.png" alt="" width={200} height={200}
+            loading="lazy"
             className="pointer-events-none h-36 w-auto opacity-60 sm:h-52 md:h-64"
             style={{ transform: "scaleX(-1) rotate(180deg)" }} />
         </div>

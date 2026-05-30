@@ -126,3 +126,46 @@ body {
 .safe-bottom {
   padding-bottom: max(14px, env(safe-area-inset-bottom));
 }
+
+/* ─── Mobile Performance Optimizations ─── */
+/* On small screens, backdrop-blur is extremely GPU-expensive on iPhones */
+@media (max-width: 768px) {
+  /* Reduce blur intensity on mobile — full blur kills iPhone GPU */
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .glass-strong {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Disable expensive orb animations on mobile — they're invisible anyway */
+  .animate-orb-float {
+    animation: none !important;
+  }
+  .animate-ring-spin {
+    animation: none !important;
+  }
+
+  /* Use GPU-composite-friendly transforms only */
+  * {
+    will-change: auto;
+  }
+}
+
+/* ─── Reduce motion for accessibility + battery ─── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-orb-float,
+  .animate-ring-spin,
+  .animate-float,
+  .animate-pulse-soft {
+    animation: none !important;
+  }
+}
+
+/* ─── Below-fold sections: let browser skip rendering until visible ─── */
+section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
