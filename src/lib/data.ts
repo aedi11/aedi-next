@@ -79,7 +79,7 @@ export const SCOPE_ITEMS = [
   },
   {
     Icon: Car,
-    image: "/images/automotive.png",
+    image: "/images/automotive.jpg",
     title: "Automotive Integration",
     description:
       "We build optimized simple as well as complex controllers for various interdependent automotive applications.",
@@ -184,28 +184,15 @@ export const TEAM_MEMBERS = [
 
   {
     Icon: Code,
-    image: "/images/bhanu.jpg",
-    name: "Bhanu Pratap Singh",
-    dept: "Dept. of Biochemical Engineering and Biotechnology, IIT Delhi",
+    image: "/images/tanay.jpg",
+    name: "Tanay",
+    dept: "Dept. of Computer Science & Engineering, IIT Delhi",
     role: "AI Engineer - Intern",
     accent: "#826015",
     bio: [
-      "Currently pursuing B.Tech in Biochemical Engineering and Biotechnology (1st year) at IIT Delhi",
-      "Research enthusiast",
-      "Undertaking research projects in AI/ML and computational Biology",
-    ],
-  },
-  {
-    Icon: Code,
-    image: "/images/duke.jpg",
-    name: "Duke Jain",
-    dept: "Dept. of Biotechnology & Biochemical Engineering, IIT Delhi",
-    role: "Full Stack Developer - Intern",
-    accent: "#826015",
-    bio: [
-      "Currently pursuing a B.Tech in Biotechnology & Biochemical Engineering (1st year) at IIT Delhi",
-      "Hands-on experience with OpenCV and computer vision pipelines",
-      "Founder & Developer of IITD Connect (iitdconnect.in), a full-stack, IITD-verified closed social platform",
+      "Currently a 2nd-year Computer Science & Engineering undergraduate at IIT Delhi, maintaining a strong focus on the theoretical foundations of the field",
+      "Deeply proficient in algorithms and probability, utilizing these mathematical frameworks to solve complex computational problems and optimize system performance.",
+      "Passionate about the intersection of software and hardware, specifically exploring Electronic Design Automation (EDA) to build tools that streamline and automate the digital design lifecycle.",
     ],
   },
   {
@@ -223,15 +210,28 @@ export const TEAM_MEMBERS = [
   },
   {
     Icon: Code,
-    image: "/images/tanay.jpg",
-    name: "Tanay",
-    dept: "Dept. of Computer Science & Engineering, IIT Delhi",
+    image: "/images/duke.jpg",
+    name: "Duke Jain",
+    dept: "Dept. of Biotechnology & Biochemical Engineering, IIT Delhi",
+    role: "Full Stack Developer - Intern",
+    accent: "#826015",
+    bio: [
+      "Currently pursuing a B.Tech in Biotechnology & Biochemical Engineering (1st year) at IIT Delhi",
+      "Hands-on experience with OpenCV and computer vision pipelines",
+      "Founder & Developer of IITD Connect (iitdconnect.in), a full-stack, IITD-verified closed social platform",
+    ],
+  },
+  {
+    Icon: Code,
+    image: "/images/bhanu.jpg",
+    name: "Bhanu Pratap Singh",
+    dept: "Dept. of Biochemical Engineering and Biotechnology, IIT Delhi",
     role: "AI Engineer - Intern",
     accent: "#826015",
     bio: [
-      "Currently a 2nd-year Computer Science & Engineering undergraduate at IIT Delhi, maintaining a strong focus on the theoretical foundations of the field",
-      "Deeply proficient in algorithms and probability, utilizing these mathematical frameworks to solve complex computational problems and optimize system performance.",
-      "Passionate about the intersection of software and hardware, specifically exploring Electronic Design Automation (EDA) to build tools that streamline and automate the digital design lifecycle.",
+      "Currently pursuing B.Tech in Biochemical Engineering and Biotechnology (1st year) at IIT Delhi",
+      "Research enthusiast",
+      "Undertaking research projects in AI/ML and computational Biology",
     ],
   },
   {

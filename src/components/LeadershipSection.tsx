@@ -1,10 +1,17 @@
 import FadeUp from "./FadeUp";
 import TeamGrid from "./TeamGrid";
+import Image from "next/image";
 
 export default function LeadershipSection() {
   return (
     <section id="leadership" className="relative overflow-hidden">
       <div className="section-divider" />
+      
+      {/* Decorative Background */}
+      <div className="pointer-events-none absolute -bottom-10 -right-10 z-0 h-[400px] w-[400px] opacity-10 select-none sm:h-[600px] sm:w-[600px]">
+        <Image src="/images/man.png" alt="" fill className="object-contain object-bottom" priority />
+      </div>
+
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-24">
         <FadeUp>
           <div className="mb-5 text-center">

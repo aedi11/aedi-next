@@ -9,11 +9,33 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
   },
   reactStrictMode: true,
-  // Enable compression
   compress: true,
-  // Reduce JS payload
+  // Reduce JS payload — tree-shake large icon/animation libraries
   experimental: {
     optimizePackageImports: ["framer-motion", "lucide-react"],
+  },
+  // Aggressive HTTP caching for static assets
+  async headers() {
+    return [
+      {
+        source: "/images/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
   },
 };
 
