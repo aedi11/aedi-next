@@ -184,7 +184,7 @@ export const TEAM_MEMBERS = [
 
   {
     Icon: Code,
-    image: "/images/bhanu.png",
+    image: "/images/bhanu.jpg",
     name: "Bhanu Pratap Singh",
     dept: "Dept. of Biochemical Engineering and Biotechnology, IIT Delhi",
     role: "AI Engineer - Intern",
@@ -197,7 +197,7 @@ export const TEAM_MEMBERS = [
   },
   {
     Icon: Code,
-    image: "/images/duke.png",
+    image: "/images/duke.jpg",
     name: "Duke Jain",
     dept: "Dept. of Biotechnology & Biochemical Engineering, IIT Delhi",
     role: "Full Stack Developer - Intern",
@@ -210,7 +210,7 @@ export const TEAM_MEMBERS = [
   },
   {
     Icon: Code,
-    image: "/images/lakshita.png",
+    image: "/images/lakshita.jpg",
     name: "Lakshita",
     dept: "Dept. of Electrical Engineering, IIT Delhi",
     role: "Backend Developer - Intern",
@@ -223,7 +223,7 @@ export const TEAM_MEMBERS = [
   },
   {
     Icon: Code,
-    image: "/images/tanay.png",
+    image: "/images/tanay.jpg",
     name: "Tanay",
     dept: "Dept. of Computer Science & Engineering, IIT Delhi",
     role: "AI Engineer - Intern",
@@ -236,7 +236,7 @@ export const TEAM_MEMBERS = [
   },
   {
     Icon: Code,
-    image: "/images/pinaki.png",
+    image: "/images/pinaki2.png",
     name: "Pinaki Narula",
     dept: "Dept. of Chemical Engineering, IIT Delhi",
     role: "Strategy & Consulting - Intern",
